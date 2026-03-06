@@ -357,9 +357,6 @@ print("\nTop 5 najvažnijih atributa (Random Forest):")
 for i, idx in enumerate(top5_idx):
     print(f"  {i+1}. {feat_names[idx]:<45} = {importances[idx]:.4f}")
 
-# ============================================================
-# 13. ZBIRNI BAR GRAFIK TAČNOSTI
-# ============================================================
 plt.figure(figsize=(13, 6))
 labels    = list(models.keys())
 x         = np.arange(len(labels))
