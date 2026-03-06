@@ -145,7 +145,7 @@ corr = df_top10.corr()
 
 plt.figure(figsize=(11, 9))
 mask = np.triu(np.ones_like(corr, dtype=bool))
-cmap = sns.diverging_palette(220, 340, as_cmap=True)  # plava-roze divergentna paleta
+cmap = sns.diverging_palette(220, 340, as_cmap=True)
 sns.heatmap(
     corr, mask=mask, cmap=cmap, center=0,
     square=True, linewidths=.5, annot=True, fmt='.2f', annot_kws={'size': 8},
@@ -168,7 +168,6 @@ models = {
 }
 
 def print_confusion_matrix(cm, model_name, suffix):
-    """Štampa matricu konfuzije u terminalu u čitljivom formatu."""
     tn, fp, fn, tp = cm.ravel()
     print(f"\n  Matrica konfuzije — {model_name} ({suffix})")
     print(f"  {'':25} Predviđeno: Stabilno   Predviđeno: Bankrot")
@@ -177,10 +176,6 @@ def print_confusion_matrix(cm, model_name, suffix):
 
 
 def evaluate_models(models, X_tr, y_tr, X_te, y_te, suffix):
-    """
-    Trenira i evaluira svaki model, čuva rezultate.
-    Vraća rečnik sa accuracy, odziv za klasu 1, precision za klasu 1 i sačuvane modele.
-    """
     results = {}
     print(f"\n{'='*60}")
     print(f"REZULTATI: {suffix.upper()} SKUP ATRIBUTA")
