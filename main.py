@@ -151,13 +151,13 @@ sns.heatmap(
     square=True, linewidths=.5, annot=True, fmt='.2f', annot_kws={'size': 8},
     cbar_kws={"shrink": .8}
 )
-plt.title('Korelaciona matrica — Top 10 atributa + ciljna promenljiva', fontsize=13, fontweight='bold')
+plt.title('Matrica korelacije — Top 10 atributa + ciljna promenljiva', fontsize=13, fontweight='bold')
 plt.xticks(rotation=35, ha='right', fontsize=8)
 plt.yticks(rotation=0, fontsize=8)
 plt.tight_layout()
-plt.savefig('korelaciona_matrica.png', dpi=150, bbox_inches='tight')
+plt.savefig('matrica_korelacije.png', dpi=150, bbox_inches='tight')
 plt.close()
-print("Slika 'korelaciona_matrica.png' je sačuvana.")
+print("Slika 'matrica_korelacije.png' je sačuvana.")
 
 models = {
     "Logistic Regression": LogisticRegression(max_iter=1000),
@@ -402,7 +402,7 @@ files = [
     ('raspodela_klasa.png',         'Pie chart raspodele klasa'),
     ('vizuelizacija_2d.png',        '2D PCA vizuelizacija'),
     ('top10_atributi.png',          'F-skorovi top 10 atributa'),
-    ('korelaciona_matrica.png',     'Heatmap korelacije atributa'),
+    ('matrica_korelacije.png',     'Heatmap korelacije atributa'),
     ('poredjenje_modela.png',       'Bar grafik tačnosti svih modela'),
     ('poredjenje_odziv.png',        'Bar grafik odziva svih modela'),
     ('roc_krive.png',               'ROC krive sa AUC skorovima'),
